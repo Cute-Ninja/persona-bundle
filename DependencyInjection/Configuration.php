@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('cute_ninja_parabola');
+        $rootNode = $treeBuilder->root('cute_ninja_persona');
 
         return $treeBuilder;
     }

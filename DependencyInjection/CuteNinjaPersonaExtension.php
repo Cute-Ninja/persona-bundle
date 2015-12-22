@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class CuteNinjaParabolaExtension extends Extension
+class CuteNinjaPersonaExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -21,10 +21,5 @@ class CuteNinjaParabolaExtension extends Extension
     {
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
-
-        $env = $container->getParameter("kernel.environment");
-        if($env == 'dev') {
-            $loader->load('services_dev.yml');
-        }
     }
 }

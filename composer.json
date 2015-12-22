@@ -28,7 +28,7 @@
     "h4cc/alice-fixtures-bundle": "~0.5"
   },
   "autoload": {
-    "psr-4": { "CuteNinja\\ParabolaBundle\\": "" }
+    "psr-4": { "CuteNinja\\PersonaBundle\\": "" }
   },
   "license": "proprietary"
 }

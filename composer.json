@@ -24,8 +24,7 @@
   },
   "require-dev": {
     "sensio/generator-bundle": "~2.3",
-    "phpunit/phpunit": "4.8.*",
-    "h4cc/alice-fixtures-bundle": "~0.5"
+    "phpunit/phpunit": "4.8.*"
   },
   "autoload": {
     "psr-4": { "CuteNinja\\PersonaBundle\\": "" }

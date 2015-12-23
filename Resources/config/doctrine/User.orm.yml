@@ -1,5 +1,5 @@
 PersonaBundle\Entity\User:
-    type: entity
+    type: mappedSuperclass
     table: "`user`"
     repositoryClass: PersonaBundle\Repository\UserRepository
     id:
@@ -13,6 +13,7 @@ PersonaBundle\Entity\User:
             id: true
             generator:
                 strategy: IDENTITY
+
     fields:
         email:
             column: email

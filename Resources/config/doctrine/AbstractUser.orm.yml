@@ -1,7 +1,7 @@
-PersonaBundle\Entity\User:
+CuteNinja\PersonaBundle\Entity\AbstractUser:
     type: mappedSuperclass
     table: "`user`"
-    repositoryClass: PersonaBundle\Repository\UserRepository
+    repositoryClass: CuteNinja\PersonaBundle\Repository\UserRepository
     fields:
         email:
             column: email

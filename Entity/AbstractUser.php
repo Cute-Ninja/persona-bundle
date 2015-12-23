@@ -11,6 +11,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 abstract class AbstractUser implements UserInterface
 {
+    const STATUS_ACTIVE = 'active';
+    const STATUS_INACTIVE = 'inactive';
+
     /**
      * @var string $email
      */
@@ -30,6 +33,21 @@ abstract class AbstractUser implements UserInterface
      * @var string[] Symfony roles
      */
     protected $roles;
+
+    /**
+     * @var string $status
+     */
+    protected $status = self::STATUS_ACTIVE;
+
+    /**
+     * @var \DateTime $creation
+     */
+    protected $createdAt;
+
+    /**
+     * @var \DateTime $lastUpdate
+     */
+    protected $updatedAt;
 
     /**
      * @return string
@@ -112,6 +130,66 @@ abstract class AbstractUser implements UserInterface
     }
 
     /**
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param string $status
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     *
+     * @return $this
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime $updatedAt
+     *
+     * @return $this
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function eraseCredentials()
@@ -124,5 +202,18 @@ abstract class AbstractUser implements UserInterface
     public function getSalt()
     {
         return;
+    }
+
+    public function logCreation()
+    {
+        $creationDate = new \DateTime();
+
+        $this->setCreatedAt($creationDate);
+        $this->setUpdatedAt($creationDate);
+    }
+
+    public function logUpdate()
+    {
+        $this->setUpdatedAt(new \DateTime());
     }
 }

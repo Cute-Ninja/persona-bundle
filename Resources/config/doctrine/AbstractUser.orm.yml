@@ -29,3 +29,35 @@ CuteNinja\PersonaBundle\Entity\AbstractUser:
             type: array
             unique: false
             nullable: true
+
+        status:
+            column: status
+            type: string
+            columnDefinition: ENUM('active', 'inactive')
+            scale: 0
+            length: 25
+            unique: false
+            nullable: false
+            precision: 0
+
+        createdAt:
+            column: created_at
+            type: datetime
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+
+        updatedAt:
+            column: updated_at
+            type: datetime
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+
+    lifecycleCallbacks:
+        prePersist: [logCreation]
+        preUpdate: [logUpdate]

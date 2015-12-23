@@ -2,9 +2,9 @@
 
 namespace CuteNinja\PersonaBundle\Repository;
 
+use CuteNinja\PersonaBundle\Entity\AbstractUser;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
-use PersonaBundle\Entity\User;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
@@ -36,7 +36,7 @@ class UserRepository extends EntityRepository implements UserProviderInterface, 
     {
         $queryBuilder = $this->getQueryBuilder();
 
-        $queryBuilder->andWhere('user.email = :username');
+        $queryBuilder->andWhere('user.username = :username');
         $queryBuilder->setParameter('username', $username);
 
         $user = $queryBuilder->getQuery()->getOneOrNullResult();
@@ -53,7 +53,7 @@ class UserRepository extends EntityRepository implements UserProviderInterface, 
      */
     public function refreshUser(UserInterface $user)
     {
-        if (!$user instanceof User) {
+        if (!$user instanceof AbstractUser) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', get_class($user)));
         }
 

@@ -1,5 +1,5 @@
 CuteNinja\PersonaBundle\Entity\AbstractUser:
-    type: mappeSuperclass
+    type: mappedSuperclass
     repositoryClass: CuteNinja\PersonaBundle\Repository\UserRepository
     fields:
         username:
@@ -56,22 +56,3 @@ CuteNinja\PersonaBundle\Entity\AbstractUser:
             type: datetime
             unique: false
             nullable: true
-
-    oneToMany:
-        roles:
-            targetEntity: CuteNinja\PersonaBundle\Entity\Role
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: user
-            inversedBy: null
-            orphanRemoval: false
-            orderBy: null
-
-        groups:
-            targetEntity: CuteNinja\PersonaBundle\Entity\Group
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: user
-            inversedBy: null
-            orphanRemoval: false
-            orderBy: null

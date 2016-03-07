@@ -7,7 +7,7 @@ CuteNinja\PersonaBundle\Entity\AbstractUser:
             type: string
             length: 100
             unique: true
-            nullable: false
+            nullable: true
 
         email:
             column: email
@@ -21,7 +21,7 @@ CuteNinja\PersonaBundle\Entity\AbstractUser:
             type: string
             length: 255
             unique: false
-            nullable: false
+            nullable: true
 
         password:
             column: password
@@ -35,21 +35,21 @@ CuteNinja\PersonaBundle\Entity\AbstractUser:
             type: string
             length: 150
             unique: false
-            nullable: false
+            nullable: true
 
         lastName:
             column: last_name
             type: string
             length: 150
             unique: false
-            nullable: false
+            nullable: true
 
         avatar:
             column: avatar
             type: string
             length: 255
             unique: false
-            nullable: false
+            nullable: true
 
         lastConnectedAt:
             column: last_connected_at

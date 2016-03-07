@@ -1,19 +1,6 @@
-CuteNinja\PersonaBundle\Entity\User:
-    type: entity
-    table: "`user`"
+CuteNinja\PersonaBundle\Entity\AbstractUser:
+    type: mappeSuperclass
     repositoryClass: CuteNinja\PersonaBundle\Repository\UserRepository
-    id:
-        id:
-            type: integer
-            scale: 0
-            length: null
-            unique: false
-            nullable: false
-            precision: 0
-            id: true
-            generator:
-                strategy: IDENTITY
-
     fields:
         username:
             column: username

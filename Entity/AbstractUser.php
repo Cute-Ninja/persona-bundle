@@ -6,17 +6,12 @@ use CuteNinja\MemoriaBundle\Entity\BaseEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * Class User
+ * Class AbstractUser
  *
  * @package CuteNinja\PersonaBundle\Entity
  */
-class User extends BaseEntity implements UserInterface
+abstract class AbstractUser extends BaseEntity implements UserInterface
 {
-    /**
-     * @var integer $id
-     */
-    protected $id;
-
     /**
      * @var string $username
      */

@@ -2,7 +2,7 @@
 
 namespace CuteNinja\PersonaBundle\Repository;
 
-use CuteNinja\PersonaBundle\Entity\AbstractUser;
+use CuteNinja\PersonaBundle\Entity\User;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
@@ -36,7 +36,7 @@ class UserRepository extends EntityRepository implements UserProviderInterface, 
     {
         $queryBuilder = $this->getQueryBuilder();
 
-        $queryBuilder->andWhere('user.username = :username');
+        $queryBuilder->andWhere('user.username = :username OR user.email = :username');
         $queryBuilder->setParameter('username', $username);
 
         $user = $queryBuilder->getQuery()->getOneOrNullResult();
@@ -53,7 +53,7 @@ class UserRepository extends EntityRepository implements UserProviderInterface, 
      */
     public function refreshUser(UserInterface $user)
     {
-        if (!$user instanceof AbstractUser) {
+        if (!$user instanceof User) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', get_class($user)));
         }
 

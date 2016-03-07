@@ -1,0 +1,90 @@
+CuteNinja\PersonaBundle\Entity\User:
+    type: entity
+    table: "`user`"
+    repositoryClass: CuteNinja\PersonaBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+            id: true
+            generator:
+                strategy: IDENTITY
+
+    fields:
+        username:
+            column: username
+            type: string
+            length: 100
+            unique: true
+            nullable: false
+
+        email:
+            column: email
+            type: string
+            length: 255
+            unique: true
+            nullable: false
+
+        salt:
+            column: salt
+            type: string
+            length: 255
+            unique: false
+            nullable: false
+
+        password:
+            column: password
+            type: string
+            length: 255
+            unique: false
+            nullable: false
+
+        firstName:
+            column: first_name
+            type: string
+            length: 150
+            unique: false
+            nullable: false
+
+        lastName:
+            column: last_name
+            type: string
+            length: 150
+            unique: false
+            nullable: false
+
+        avatar:
+            column: avatar
+            type: string
+            length: 255
+            unique: false
+            nullable: false
+
+        lastConnectedAt:
+            column: last_connected_at
+            type: datetime
+            unique: false
+            nullable: true
+
+    oneToMany:
+        roles:
+            targetEntity: CuteNinja\PersonaBundle\Entity\Role
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: user
+            inversedBy: null
+            orphanRemoval: false
+            orderBy: null
+
+        groups:
+            targetEntity: CuteNinja\PersonaBundle\Entity\Group
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: user
+            inversedBy: null
+            orphanRemoval: false
+            orderBy: null

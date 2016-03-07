@@ -1,4 +1,6 @@
 /vendor/
+/bin/
 /web/bundles/
 /behat.yml
 .idea/
+phpunit.xml

@@ -20,14 +20,18 @@
     "symfony/monolog-bundle": "~2.4",
     "sensio/distribution-bundle": "~4.0",
     "sensio/framework-extra-bundle": "~3.0.2",
-    "incenteev/composer-parameter-handler": "~2.0"
+    "incenteev/composer-parameter-handler": "~2.0",
+
+    "cuteninja/memoria-bundle": "~0.0"
   },
   "require-dev": {
     "sensio/generator-bundle": "~2.3",
     "phpunit/phpunit": "4.8.*"
   },
   "autoload": {
-    "psr-4": { "CuteNinja\\PersonaBundle\\": "" }
+    "psr-4": {
+      "CuteNinja\\PersonaBundle\\": ""
+    }
   },
-  "license": "proprietary"
+  "license": "MIT"
 }

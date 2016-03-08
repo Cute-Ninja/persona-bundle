@@ -2,7 +2,7 @@
 
 namespace CuteNinja\PersonaBundle\Entity;
 
-use CuteNinja\MemoriaBundle\Entity\BaseEntity;
+use CuteNinja\MemoriaBundle\Entity\AbstractBaseEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  *
  * @package CuteNinja\PersonaBundle\Entity
  */
-abstract class AbstractUser extends BaseEntity implements UserInterface
+abstract class AbstractUser extends AbstractBaseEntity implements UserInterface
 {
     /**
      * @var string $username

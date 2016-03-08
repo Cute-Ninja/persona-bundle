@@ -2,14 +2,14 @@
 
 namespace CuteNinja\PersonaBundle\Entity;
 
-use CuteNinja\MemoriaBundle\Entity\BaseEntity;
+use CuteNinja\MemoriaBundle\Entity\AbstractBaseEntity;
 
 /**
  * Class Group
  *
  * @package CuteNinja\PersonaBundle\Entity
  */
-class Group extends BaseEntity
+class Group extends AbstractBaseEntity
 {
     /**
      * Used as ID.

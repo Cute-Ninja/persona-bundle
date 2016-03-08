@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cute-Ninja/memoria-bundle.git",
-                "reference": "998b4913c0ea9a7ffd71410c2eb92e9b9d01636b"
+                "reference": "9db73477caf733b48be9aa939b1cf60d163c1811"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cute-Ninja/memoria-bundle/zipball/998b4913c0ea9a7ffd71410c2eb92e9b9d01636b",
-                "reference": "998b4913c0ea9a7ffd71410c2eb92e9b9d01636b",
+                "url": "https://api.github.com/repos/Cute-Ninja/memoria-bundle/zipball/9db73477caf733b48be9aa939b1cf60d163c1811",
+                "reference": "9db73477caf733b48be9aa939b1cf60d163c1811",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                 "api",
                 "common"
             ],
-            "time": "2016-03-08 09:42:59"
+            "time": "2016-03-08 10:07:48"
         },
         {
             "name": "doctrine/annotations",

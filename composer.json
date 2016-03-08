@@ -22,7 +22,7 @@
     "sensio/framework-extra-bundle": "~3.0.2",
     "incenteev/composer-parameter-handler": "~2.0",
 
-    "cuteninja/memoria-bundle": "~0.0"
+    "cuteninja/memoria-bundle": "dev-feat-bo-user-right"
   },
   "require-dev": {
     "sensio/generator-bundle": "~2.3",

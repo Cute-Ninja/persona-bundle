@@ -1,10 +1,11 @@
 <?php
 
-namespace CuteNinja\PersonaBundle\Test\Entity;
+namespace CuteNinja\PersonaBundle\Tests\Entity;
 
+use CuteNinja\PersonaBundle\Entity\AbstractUser;
 use CuteNinja\PersonaBundle\Entity\Group;
 use CuteNinja\PersonaBundle\Entity\Role;
-use CuteNinja\PersonaBundle\Entity\User;
+use CuteNinja\PersonaBundle\Tests\Model\User;
 
 /**
  * Class UserTest
@@ -101,7 +102,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return User
+     * @return AbstractUser
      */
     private function buildTestUser()
     {

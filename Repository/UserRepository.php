@@ -2,8 +2,8 @@
 
 namespace CuteNinja\PersonaBundle\Repository;
 
-use CuteNinja\PersonaBundle\Entity\User;
-use Doctrine\ORM\EntityRepository;
+use CuteNinja\MemoriaBundle\Repository\AbstractCriteriaRepository;
+use CuteNinja\PersonaBundle\Entity\AbstractUser;
 use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
@@ -16,9 +16,8 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
  *
  * @package PersonaBundle\Repository
  */
-class UserRepository extends EntityRepository implements UserProviderInterface, UserLoaderInterface
-{
-    /**
+class UserRepository extends AbstractCriteriaRepository implements UserProviderInterface, UserLoaderInterface
+{    /**
      * @return QueryBuilder
      */
     public function getQueryBuilder()
@@ -53,7 +52,7 @@ class UserRepository extends EntityRepository implements UserProviderInterface, 
      */
     public function refreshUser(UserInterface $user)
     {
-        if (!$user instanceof User) {
+        if (!$user instanceof AbstractUser) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', get_class($user)));
         }
 

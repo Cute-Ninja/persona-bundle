@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4ab3a853586eee7025314478c513fc72",
-    "content-hash": "d45b4b8eb62e85e62ed94063f3cad44b",
+    "hash": "faaab8a013a5f27070c86fa8e0f8bcf9",
+    "content-hash": "cf33304378b5d8b9e0737b15f9354ce2",
     "packages": [
         {
             "name": "cuteninja/memoria-bundle",
-            "version": "0.0.0",
+            "version": "dev-feat-bo-user-right",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cute-Ninja/memoria-bundle.git",
-                "reference": "9e1399d469a28c9d92c44354bfa81cf3c2730ffc"
+                "reference": "998b4913c0ea9a7ffd71410c2eb92e9b9d01636b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cute-Ninja/memoria-bundle/zipball/9e1399d469a28c9d92c44354bfa81cf3c2730ffc",
-                "reference": "9e1399d469a28c9d92c44354bfa81cf3c2730ffc",
+                "url": "https://api.github.com/repos/Cute-Ninja/memoria-bundle/zipball/998b4913c0ea9a7ffd71410c2eb92e9b9d01636b",
+                "reference": "998b4913c0ea9a7ffd71410c2eb92e9b9d01636b",
                 "shasum": ""
             },
             "require": {
@@ -33,6 +33,7 @@
                 "symfony/symfony": "2.8.*"
             },
             "require-dev": {
+                "doctrine/doctrine-fixtures-bundle": "^2.3",
                 "h4cc/alice-fixtures-bundle": "~0.5",
                 "phpunit/phpunit": "4.8.*",
                 "sensio/generator-bundle": "~2.3"
@@ -58,7 +59,7 @@
                 "api",
                 "common"
             ],
-            "time": "2016-01-20 13:05:04"
+            "time": "2016-03-08 09:42:59"
         },
         {
             "name": "doctrine/annotations",
@@ -3075,7 +3076,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "cuteninja/memoria-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
